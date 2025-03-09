@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import {useAuth} from '../context/AppContext'
 const RecentHighLight = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [flatImages, setFlatImages] = useState([]); // Flattened image list
+  const [flatImages, setFlatImages] = useState([]); 
+  const {url} = useAuth()
+  // Flattened image list
 
   // 📌 Fetch Images from API
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/recent")
+    fetch(`${url}/api/v1/recent`)
       .then((res) => res.json())
       .then((data) => {
         // 🔹 Flatten the images array
