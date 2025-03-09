@@ -9,7 +9,7 @@ export const AppContextProvider = ({ children }) => {
   const [branches, setBranches] = useState(null);
   const [courses, setCourses] = useState(null);
   const [loading, setLoading] = useState(true);
-  const url = "http://localhost:3000";
+  const url = "https://ttsdf1.onrender.com";
   const navigate = useNavigate();
 
   useEffect(() => {
