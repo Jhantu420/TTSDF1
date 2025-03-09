@@ -11,7 +11,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 4000;
 const app = express();
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["https://ttsdfclient.vercel.app/"];
 
 app.use(
   cors({
